@@ -25,6 +25,18 @@ public class Main {
         System.out.println("TODO:");
 
         System.out.println("Met <nieuw> vervoer, lambda edition! (Stap 5)");
-        System.out.println("TODO:");
+
+        Reis metDeBoot = new Reis(false);
+
+        VervoerStrategy vervoerMetBoot = (reisTijdInSpits) -> {
+            if(reisTijdInSpits) {
+                return 120;
+            }
+            else {
+                return 60;
+            }
+        };
+
+        metDeBoot.simuleerReis(vervoerMetBoot);
     }
 }
